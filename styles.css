@@ -608,8 +608,8 @@ html {
   text-align: center;
   border: 3px solid var(--gold);
   transition: var(--transition);
-  animation: fadeIn 0.6s ease forwards;
   opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -997,6 +997,5 @@ footer p {
   
   .bubble-item {
     border-radius: 15px;
-    aspect-ratio: auto;
   }
 }

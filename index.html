@@ -517,6 +517,14 @@
                     button.textContent = originalText;
                     button.style.backgroundColor = '';
                 }, 2000);
+            }).catch((err) => {
+                console.error('Błąd kopiowania:', err);
+                button.textContent = '❌ Błąd';
+                button.style.backgroundColor = '#f44336';
+                setTimeout(() => {
+                    button.textContent = 'Kopiuj';
+                    button.style.backgroundColor = '';
+                }, 2000);
             });
         }
     </script>
