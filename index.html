@@ -3,369 +3,827 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karen Tonoyan - AI Developer | Psycholog | Fotograf | Pisarz</title>
-    <meta name="description" content="Karen Tonoyan - Programy AI, e-booki, testy psychologiczne, galeria promptów, porady AI">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --gold: #D4AF37; --dark: #1a1a1a; --gray: #2d2d2d; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--dark); color: white; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        nav { background: #0d0d0d; padding: 15px 0; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
-        nav ul { display: flex; justify-content: center; gap: 30px; list-style: none; flex-wrap: wrap; }
-        nav a { color: var(--gold); text-decoration: none; font-weight: bold; }
-        header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 80px 0; text-align: center; border-bottom: 3px solid var(--gold); }
-        header h1 { font-size: 3.5rem; color: var(--gold); text-transform: uppercase; letter-spacing: 3px; }
-        .contact-bar { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
-        .contact-bar a { color: var(--gold); text-decoration: none; }
-        section { padding: 60px 0; border-bottom: 1px solid var(--gray); }
-        h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 40px; text-align: center; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
-        .card { background: var(--gray); padding: 30px; border-radius: 10px; border: 2px solid transparent; transition: 0.3s; }
-        .card:hover { border-color: var(--gold); transform: translateY(-5px); }
-        .card h3 { color: var(--gold); font-size: 1.5rem; margin-bottom: 15px; }
-        .badge { display: inline-block; background: var(--gold); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px; }
-        .badge-free { background: #4CAF50; color: white; }
-        .badge-coming { background: #FF9800; color: white; }
-        .btn { display: inline-block; padding: 12px 30px; background: var(--gold); color: var(--dark); text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; cursor: pointer; border: none; margin-top: 10px; }
-        .btn:hover { transform: scale(1.05); }
-        .features { list-style: none; margin: 15px 0; }
-        .features li:before { content: "✓ "; color: var(--gold); font-weight: bold; margin-right: 8px; }
-        @media (max-width: 768px) { header h1 { font-size: 2rem; } .grid { grid-template-columns: 1fr; } }
-    </style>
+    <title>Karen Tonoyan - Ekspert AI | Szkolenia i Konsultacje</title>
+    <meta name="description" content="Profesjonalne szkolenia i konsultacje AI. Poznaj możliwości sztucznej inteligencji i wykorzystaj ją w swojej pracy.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome dla ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#cv">CV</a></li>
-            <li><a href="#programy">Programy AI</a></li>
-            <li><a href="#ebooki">E-booki</a></li>
-            <li><a href="#testy">Testy</a></li>
-            <li><a href="#ai-porady">Porady AI</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
+    <!-- NAWIGACJA -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">KT</div>
+            <ul class="nav-menu">
+                <li><a href="#welcome">Start</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#ai-intro">Czym jest AI</a></li>
+                <li><a href="#ai-tips">Porady AI</a></li>
+                <li><a href="#ai-tools">Narzędzia</a></li>
+                <li><a href="#automation">Automatyzacja</a></li>
+                <li><a href="#security">Bezpieczeństwo</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-    <header>
+    <!-- SEKCJA POWITALNA -->
+    <section id="welcome" class="welcome-section">
         <div class="container">
-            <h1>Karen Tonoyan</h1>
-            <p style="font-size: 1.3rem; color: #ccc; margin: 20px 0;">
-                AI Developer | Psycholog (17 lat, 309 klientów) | Fotograf | Pisarz
-            </p>
-            <div class="contact-bar">
-                <a href="mailto:kontakt@karentonoyan.pl">📧 kontakt@karentonoyan.pl</a>
-                <a href="mailto:ktonoyan38@gmail.com">📧 ktonoyan38@gmail.com</a>
-                <a href="tel:+48796230413">📞 796 230 413</a>
-                <a href="https://github.com/Karen86Tonoyan" target="_blank">💻 GitHub</a>
+            <div class="welcome-content">
+                <div class="profile-photo">
+                    <!-- Miejsce na zdjęcie - zamień na rzeczywiste -->
+                    <img src="twoje-zdjecie.jpg" alt="Karen Tonoyan" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect fill=%22%23333%22 width=%22300%22 height=%22300%22/%3E%3Ctext fill=%22%23FFD700%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2224%22 font-family=%22Arial%22%3ETwoje zdjęcie%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="welcome-text">
+                    <h1>Karen Tonoyan</h1>
+                    <p class="motto">"Sztuczna inteligencja to nie przyszłość - to teraźniejszość. Pozwól, że pokażę Ci jak z niej korzystać."</p>
+                    <p class="subtitle">Ekspert AI | Szkolenia | Konsultacje | Automatyzacja</p>
+                    <a href="#contact" class="cta-btn">Skontaktuj się</a>
+                </div>
             </div>
-        </div>
-    </header>
-
-    <section style="background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); padding: 60px 20px; text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 2rem;">🧠 Pracuję nad aplikacją AI wspierającą terapię psychologiczną</h2>
-            <p style="font-size: 1.2rem; color: #ccc; max-width: 800px; margin: 20px auto;">
-                Łącząc 17 lat doświadczenia w psychologii z zaawansowanymi technologiami AI, 
-                tworzę narzędzie które pomoże tysiącom osób. System FILTRY TONOYANA zapewnia bezpieczną interakcję z AI.
-            </p>
         </div>
     </section>
 
-    <!-- CV -->
-    <section id="cv">
+    <!-- O MNIE -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2>📄 CV & Kompetencje</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🎓 Wykształcenie</h3>
-                    <ul class="features">
-                        <li>2003-2005: Technikum Medyczne</li>
-                        <li>2005-2007: SAPER</li>
+            <h2>O mnie</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Witaj! Jestem Karen Tonoyan, specjalistą w dziedzinie sztucznej inteligencji z wieloletnim doświadczeniem w praktycznym zastosowaniu AI w biznesie i życiu codziennym.</p>
+                    <p>Moją pasją jest edukacja i pokazywanie ludziom, jak AI może ułatwić ich pracę, zwiększyć produktywność i otworzyć nowe możliwości. Prowadzę szkolenia, warsztaty i konsultacje dla firm oraz osób indywidualnych.</p>
+                    <p>Wierzę, że każdy może nauczyć się efektywnie korzystać z AI - wystarczy odpowiednie podejście i praktyczna wiedza.</p>
+                    <div class="cv-download">
+                        <a href="CV_Karen_Tonoyan.pdf" class="cta-btn" download>
+                            <i class="fas fa-download"></i> Pobierz moje CV
+                        </a>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Przeszkolonych osób</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Projektów AI</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-award"></i>
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Lat doświadczenia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CZYM JEST AI -->
+    <section id="ai-intro" class="ai-intro-section">
+        <div class="container">
+            <h2>Czym jest sztuczna inteligencja?</h2>
+            <div class="ai-intro-content">
+                <p class="intro-lead">Sztuczna inteligencja (AI) to technologia, która pozwala komputerom wykonywać zadania wymagające ludzkiej inteligencji: rozumienie języka, rozpoznawanie obrazów, podejmowanie decyzji i uczenie się.</p>
+                
+                <div class="ai-features-grid">
+                    <div class="feature-box">
+                        <i class="fas fa-brain"></i>
+                        <h3>Uczenie maszynowe</h3>
+                        <p>AI uczy się na danych i z czasem staje się coraz lepsza w wykonywaniu zadań.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-comments"></i>
+                        <h3>Przetwarzanie języka</h3>
+                        <p>Rozumie i generuje tekst w naturalnym języku, tak jak rozmowa z człowiekiem.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-robot"></i>
+                        <h3>Automatyzacja</h3>
+                        <p>Wykonuje powtarzalne zadania szybciej i dokładniej niż człowiek.</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analiza danych</h3>
+                        <p>Przetwarza ogromne ilości informacji i znajduje wzorce niedostrzegalne dla ludzi.</p>
+                    </div>
+                </div>
+
+                <div class="ai-explanation">
+                    <h3>Jak to działa w praktyce?</h3>
+                    <p>Wyobraź sobie asystenta, który:</p>
+                    <ul>
+                        <li>Pisze za Ciebie e-maile i dokumenty</li>
+                        <li>Tłumaczy teksty na kilkadziesiąt języków</li>
+                        <li>Tworzy grafiki, prezentacje i treści marketingowe</li>
+                        <li>Analizuje dane i generuje raporty</li>
+                        <li>Odpowiada na pytania klientów 24/7</li>
+                        <li>Automatyzuje Twoją pracę administracyjną</li>
                     </ul>
-                </div>
-                <div class="card">
-                    <h3>💻 Umiejętności</h3>
-                    <ul class="features">
-                        <li>Python, AI, Machine Learning</li>
-                        <li>Photoshop, Corel Draw</li>
-                        <li>Cyberbezpieczeństwo</li>
-                        <li>17 lat: Psychologia</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>🌍 Języki</h3>
-                    <ul class="features">
-                        <li>Ormiański (ojczysty)</li>
-                        <li>Rosyjski (biegle)</li>
-                        <li>Angielski</li>
-                        <li>Niemiecki</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROGRAMY -->
-    <section id="programy">
-        <div class="container">
-            <h2>🤖 Moje Programy AI</h2>
-            <p style="text-align: center; color: #ccc; margin-bottom: 40px;">
-                <strong style="color: var(--gold);">Licencje i współpraca</strong> - kontakt: kontakt@karentonoyan.pl
-            </p>
-            <div class="grid">
-                <div class="card">
-                    <span class="badge">FLAGSHIP</span>
-                    <h3>🔱 ALFA CORE v2.0</h3>
-                    <p style="color: #ccc;">Multi-AI Orchestration - Claude, GPT, Gemini, Ollama w jednym systemie</p>
-                    <a href="mailto:kontakt@karentonoyan.pl" class="btn">Zapytaj o licencję</a>
-                </div>
-                <div class="card">
-                    <span class="badge">PREMIUM</span>
-                    <h3>🛡️ FILTRY TONOYANA</h3>
-                    <p style="color: #ccc;">7 filtrów anty-halucynacyjnych - 95% reliability</p>
-                    <a href="mailto:kontakt@karentonoyan.pl" class="btn">Zapytaj o licencję</a>
-                </div>
-                <div class="card">
-                    <span class="badge-coming">W BUDOWIE</span>
-                    <h3>❤️ ALFA Therapy</h3>
-                    <p style="color: #ccc;">AI wsparcie psychologiczne - bezpieczne i etyczne</p>
-                    <a href="mailto:kontakt@karentonoyan.pl" class="btn">Bądź na bieżąco</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- E-BOOKI -->
-    <section id="ebooki">
-        <div class="container">
-            <h2>📚 Moje Książki & E-booki</h2>
-            <p style="text-align: center; color: #ccc; margin-bottom: 40px;">
-                Dostępne wkrótce na tej stronie - powiadomienie: <a href="mailto:kontakt@karentonoyan.pl" style="color: var(--gold);">kliknij tutaj</a>
-            </p>
-            <div class="grid">
-                <div class="card">
-                    <span class="badge">GOTOWE</span>
-                    <h3>📖 Antychryst: Kronika Karena Tonoyona</h3>
-                    <p style="color: #ccc;">Saga science fiction - historia transformacji i walki o przetrwanie</p>
-                </div>
-                <div class="card">
-                    <span class="badge">GOTOWE</span>
-                    <h3>📖 Fenomen Czarnego Baranka</h3>
-                    <p style="color: #ccc;">Autobiografia - od Armenii do Polski, przez breakdance i AI</p>
-                </div>
-                <div class="card">
-                    <span class="badge">GOTOWE</span>
-                    <h3>📖 Sumienie AI</h3>
-                    <p style="color: #ccc;">Etyka sztucznej inteligencji - czy AI potrzebuje sumienia?</p>
-                </div>
-                <div class="card">
-                    <span class="badge-coming">W PRZYGOTOWANIU</span>
-                    <h3>📖 Jak Rozpoznać Manipulację</h3>
-                    <p style="color: #ccc;">Praktyczny przewodnik po technikach manipulacji psychologicznej</p>
-                </div>
-                <div class="card">
-                    <span class="badge-coming">W PRZYGOTOWANIU</span>
-                    <h3>📖 Psychologia Zwycięstwa</h3>
-                    <p style="color: #ccc;">17 lat doświadczenia - 309 przypadków - metodologia sukcesu</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTY -->
-    <section id="testy">
-        <div class="container">
-            <h2>🧪 Darmowe Testy Psychologiczne</h2>
-            <p style="text-align: center; color: #ccc; margin-bottom: 40px;">
-                Profesjonalne testy oparte na 17-letnim doświadczeniu praktycznym
-            </p>
-            <div class="grid">
-                <div class="card">
-                    <span class="badge-free">DARMOWY</span>
-                    <h3>💪 Psychologia Zwycięstwa</h3>
-                    <p style="color: #ccc;">Oceń swoje nastawienie na sukces - 15 pytań, 5 minut</p>
-                    <button class="btn" onclick="alert('Test dostępny wkrótce!')">Rozpocznij Test</button>
-                </div>
-                <div class="card">
-                    <span class="badge-free">DARMOWY</span>
-                    <h3>🛡️ Odporność Psychiczna</h3>
-                    <p style="color: #ccc;">Jak radzisz sobie ze stresem - 20 pytań, 7 minut</p>
-                    <button class="btn" onclick="alert('Test dostępny wkrótce!')">Rozpocznij Test</button>
-                </div>
-                <div class="card">
-                    <span class="badge-free">DARMOWY</span>
-                    <h3>🎭 Rozpoznawanie Manipulacji</h3>
-                    <p style="color: #ccc;">Wykrywaj manipulację - 12 scenariuszy, 8 minut</p>
-                    <button class="btn" onclick="alert('Test dostępny wkrótce!')">Rozpocznij Test</button>
+                    <p><strong>To wszystko jest możliwe już dziś!</strong></p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PORADY AI -->
-    <section id="ai-porady">
+    <section id="ai-tips" class="ai-tips-section">
         <div class="container">
-            <h2>🤖 Jakie AI Polecam & Jak Korzystać</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🏆 Claude (Anthropic)</h3>
-                    <ul class="features">
-                        <li>Najlepsze do pisania & analizy</li>
-                        <li>200K context window</li>
-                        <li>Bezpieczne i etyczne</li>
-                        <li>claude.ai - darmowy dostęp</li>
-                    </ul>
-                    <a href="https://claude.ai" target="_blank" class="btn">Odwiedź Claude</a>
-                </div>
-                <div class="card">
-                    <h3>💬 ChatGPT (OpenAI)</h3>
-                    <ul class="features">
-                        <li>Uniwersalne zastosowanie</li>
-                        <li>Plugins & DALL-E</li>
-                        <li>Kod & automatyzacja</li>
-                        <li>chat.openai.com</li>
-                    </ul>
-                    <a href="https://chat.openai.com" target="_blank" class="btn">Odwiedź ChatGPT</a>
-                </div>
-                <div class="card">
-                    <h3>🖼️ Midjourney</h3>
-                    <ul class="features">
-                        <li>Najlepsze obrazy AI</li>
-                        <li>Fotorealizm</li>
-                        <li>Przez Discord</li>
-                        <li>Od $10/miesiąc</li>
-                    </ul>
-                    <a href="https://midjourney.com" target="_blank" class="btn">Odwiedź Midjourney</a>
-                </div>
-                <div class="card">
-                    <h3>🦙 Ollama (Local)</h3>
-                    <ul class="features">
-                        <li>100% offline</li>
-                        <li>Pełna prywatność</li>
-                        <li>Darmowe modele</li>
-                        <li>Windows/Mac/Linux</li>
-                    </ul>
-                    <a href="https://ollama.com" target="_blank" class="btn">Pobierz Ollama</a>
-                </div>
-            </div>
+            <h2>Jak rozmawiać z AI - Praktyczne porady</h2>
             
-            <div style="margin-top: 60px; background: var(--gray); padding: 40px; border-radius: 15px;">
-                <h3 style="color: var(--gold); margin-bottom: 20px; text-align: center;">💡 Jak Pisać Dobre Prompty?</h3>
-                <div style="color: #ccc;">
-                    <p><strong>1. Bądź konkretny:</strong> Zamiast "Napisz tekst" → "Napisz 500-słowny artykuł o AI w medycynie, styl naukowy, dla lekarzy"</p><br>
-                    <p><strong>2. Podaj kontekst:</strong> "Jestem właścicielem restauracji. Pomóż mi stworzyć menu na weekend."</p><br>
-                    <p><strong>3. Określ format:</strong> "Odpowiedz w formie listy punktowanej" lub "Napisz jako dialog"</p><br>
-                    <p><strong>4. Poproś o myślenie krok po kroku:</strong> "Najpierw przeanalizuj problem, potem zaproponuj rozwiązania"</p><br>
-                    <p><strong>5. Używaj przykładów:</strong> "Styl jak Hemingway" lub "Format jak raport McKinsey"</p>
+            <!-- Jak rozmawiać z AI -->
+            <div class="tips-content">
+                <div class="tip-block">
+                    <h3><i class="fas fa-lightbulb"></i> Podstawowe zasady</h3>
+                    <div class="tip-list">
+                        <div class="tip-item">
+                            <span class="tip-number">1</span>
+                            <div class="tip-text">
+                                <h4>Bądź konkretny</h4>
+                                <p>Im bardziej precyzyjne pytanie, tym lepsza odpowiedź. Zamiast "Napisz coś o marketingu" napisz "Napisz post na LinkedIn o korzyściach z email marketingu dla małych firm, 200 słów, ton profesjonalny."</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-number">2</span>
+                            <div class="tip-text">
+                                <h4>Podaj kontekst</h4>
+                                <p>Powiedz AI kim jesteś i co chcesz osiągnąć. Np. "Jestem właścicielem restauracji i szukam pomysłów na menu wegetariańskie na lato."</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-number">3</span>
+                            <div class="tip-text">
+                                <h4>Określ format odpowiedzi</h4>
+                                <p>Powiedz jak ma wyglądać odpowiedź: lista punktowana, tabela, kod, esej, instrukcja krok po kroku.</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-number">4</span>
+                            <div class="tip-text">
+                                <h4>Iteruj i doprecyzowuj</h4>
+                                <p>Jeśli odpowiedź nie jest idealna, dopytuj: "Rozwiń punkt 3", "Zrób to krócej", "Dodaj więcej przykładów".</p>
+                            </div>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-number">5</span>
+                            <div class="tip-text">
+                                <h4>Poproś o myślenie krok po kroku</h4>
+                                <p>Dla złożonych problemów dodaj: "Pomyśl krok po kroku" lub "Najpierw przeanalizuj problem, potem zaproponuj rozwiązania."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Przykłady dobrych promptów -->
+                <div class="tip-block">
+                    <h3><i class="fas fa-star"></i> Przykłady dobrych promptów</h3>
+                    <div class="examples-grid">
+                        <div class="example-card">
+                            <div class="example-category">Marketing</div>
+                            <div class="example-prompt">
+                                "Stwórz strategię contentu na Instagram dla studia fitness. Grupa docelowa: kobiety 25-40 lat. 4 posty tygodniowo. Zawrzyj pomysły na posty, hashtagi i najlepsze godziny publikacji."
+                            </div>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-category">Programowanie</div>
+                            <div class="example-prompt">
+                                "Napisz funkcję w Python, która pobiera dane z API, przetwarza JSON i zapisuje wyniki do CSV. Dodaj obsługę błędów i komentarze w kodzie."
+                            </div>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-category">Biznes</div>
+                            <div class="example-prompt">
+                                "Przeanalizuj mój pomysł na startup: aplikacja do dzielenia się posiłkami z sąsiadami. Wskaż mocne strony, zagrożenia i pierwsze kroki do realizacji."
+                            </div>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-category">Edukacja</div>
+                            <div class="example-prompt">
+                                "Wyjaśnij teorię względności dla ucznia liceum. Użyj prostego języka i codziennych przykładów. Maksymalnie 300 słów."
+                            </div>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-category">Życie codzienne</div>
+                            <div class="example-prompt">
+                                "Potrzebuję planu treningowego na 4 tygodnie dla początkującego, 3x w tygodniu, 45 minut, bez sprzętu. Cel: ogólna kondycja."
+                            </div>
+                        </div>
+                        <div class="example-card">
+                            <div class="example-category">Kreatywność</div>
+                            <div class="example-prompt">
+                                "Napisz krótkie opowiadanie sci-fi (500 słów) o pierwszym kontakcie z obcą cywilizacją. Styl: Stanisław Lem. Zakończenie: otwarte."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Szablony promptów -->
+                <div class="tip-block">
+                    <h3><i class="fas fa-file-alt"></i> Uniwersalne szablony promptów</h3>
+                    <div class="templates-list">
+                        <div class="template-item">
+                            <h4>Szablon do pisania treści</h4>
+                            <div class="template-code">
+                                Napisz [typ treści] na temat [temat].<br>
+                                Grupa docelowa: [kto]<br>
+                                Długość: [ile słów/znaków]<br>
+                                Ton: [formalny/casual/profesjonalny/humorystyczny]<br>
+                                Cel: [edukacja/sprzedaż/angażowanie/informacja]<br>
+                                Format: [artykuł/post/email/instrukcja]
+                            </div>
+                        </div>
+                        <div class="template-item">
+                            <h4>Szablon do analizy i problemów</h4>
+                            <div class="template-code">
+                                Pomóż mi z [problem/wyzwanie].<br>
+                                Kontekst: [szczegóły sytuacji]<br>
+                                Cel: [co chcę osiągnąć]<br>
+                                Ograniczenia: [budżet/czas/zasoby]<br>
+                                Proszę: przeanalizuj sytuację, zaproponuj 3-5 rozwiązań, wskaż najlepsze i uzasadnij wybór.
+                            </div>
+                        </div>
+                        <div class="template-item">
+                            <h4>Szablon do uczenia się</h4>
+                            <div class="template-code">
+                                Wyjaśnij [temat/koncepcja].<br>
+                                Mój poziom wiedzy: [początkujący/średniozaawansowany/zaawansowany]<br>
+                                Preferowany styl: [z przykładami/analogiami/krok po kroku]<br>
+                                Użyj prostego języka i sprawdź moje zrozumienie zadając pytania.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Częste błędy -->
+                <div class="tip-block warning-block">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Czego unikać</h3>
+                    <div class="mistakes-list">
+                        <div class="mistake-item">
+                            <span class="mistake-icon">✗</span>
+                            <div>
+                                <strong>Zbyt ogólne pytania</strong>
+                                <p>"Powiedz mi o AI" → Za mało konkretne</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item">
+                            <span class="mistake-icon">✗</span>
+                            <div>
+                                <strong>Brak kontekstu</strong>
+                                <p>"Jak to zrobić?" → AI nie wie o czym mówisz</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item">
+                            <span class="mistake-icon">✗</span>
+                            <div>
+                                <strong>Za dużo na raz</strong>
+                                <p>Zadawanie 10 pytań w jednym prompcie → Rozdziel na mniejsze</p>
+                            </div>
+                        </div>
+                        <div class="mistake-item">
+                            <span class="mistake-icon">✗</span>
+                            <div>
+                                <strong>Oczekiwanie perfekcji za pierwszym razem</strong>
+                                <p>AI to narzędzie do iteracji - dopytuj i doprecyzowuj</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALERIA PROMPTÓW -->
-    <section id="galeria">
+    <!-- NARZĘDZIA AI -->
+    <section id="ai-tools" class="ai-tools-section">
         <div class="container">
-            <h2>🎨 Galeria Promptów do Generowania Obrazów</h2>
-            <p style="text-align: center; color: #ccc; margin-bottom: 40px;">
-                Gotowe szablony promptów dla Midjourney, DALL-E, Stable Diffusion - kopiuj i używaj!
-            </p>
+            <h2>Najlepsze narzędzia AI</h2>
+            <p class="section-subtitle">Sprawdzone i polecane przeze mnie rozwiązania</p>
             
-            <div class="grid">
-                <div class="card">
-                    <h3>📸 Fotorealizm - Portret</h3>
-                    <code style="display: block; background: #000; padding: 15px; border-radius: 5px; color: #0f0; margin: 15px 0;">
-                        professional portrait photo, 50mm lens, natural lighting, sharp focus, high detail, cinematic, 8k --ar 2:3 --v 6
-                    </code>
-                    <button class="btn" onclick="navigator.clipboard.writeText('professional portrait photo, 50mm lens, natural lighting, sharp focus, high detail, cinematic, 8k --ar 2:3 --v 6')">Kopiuj Prompt</button>
+            <div class="tools-grid">
+                <!-- ChatGPT -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>ChatGPT</h3>
+                    <div class="tool-badge">Najpopularniejsze</div>
+                    <p class="tool-description">Uniwersalny asystent AI od OpenAI. Najlepszy do pisania, analizy tekstu, programowania i ogólnych zadań.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Wersja darmowa dostępna</li>
+                        <li><i class="fas fa-check"></i> GPT-4 w wersji Plus ($20/mies.)</li>
+                        <li><i class="fas fa-check"></i> Plugins i DALL-E do grafik</li>
+                        <li><i class="fas fa-check"></i> Analiza dokumentów i obrazów</li>
+                    </ul>
+                    <a href="https://chat.openai.com" target="_blank" class="tool-btn">Odwiedź ChatGPT</a>
                 </div>
-                
-                <div class="card">
-                    <h3>🏙️ Krajobraz Miejski</h3>
-                    <code style="display: block; background: #000; padding: 15px; border-radius: 5px; color: #0f0; margin: 15px 0;">
-                        cyberpunk city skyline at night, neon lights, rain, reflections, cinematic composition, high contrast --ar 16:9 --v 6
-                    </code>
-                    <button class="btn" onclick="navigator.clipboard.writeText('cyberpunk city skyline at night, neon lights, rain, reflections, cinematic composition, high contrast --ar 16:9 --v 6')">Kopiuj Prompt</button>
+
+                <!-- Claude -->
+                <div class="tool-card featured">
+                    <div class="tool-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Claude</h3>
+                    <div class="tool-badge">Mój wybór</div>
+                    <p class="tool-description">Claude od Anthropic to najlepsze AI do analizy długich tekstów, pisania i złożonych zadań analitycznych.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Darmowy dostęp</li>
+                        <li><i class="fas fa-check"></i> 200K kontekstu (100+ stron)</li>
+                        <li><i class="fas fa-check"></i> Świetne zrozumienie nuansów</li>
+                        <li><i class="fas fa-check"></i> Etyczne i bezpieczne</li>
+                    </ul>
+                    <a href="https://claude.ai" target="_blank" class="tool-btn">Odwiedź Claude</a>
                 </div>
-                
-                <div class="card">
-                    <h3>🎨 Artystyczny Styl</h3>
-                    <code style="display: block; background: #000; padding: 15px; border-radius: 5px; color: #0f0; margin: 15px 0;">
-                        oil painting, impressionist style, vibrant colors, thick brushstrokes, museum quality, masterpiece --ar 4:5
-                    </code>
-                    <button class="btn" onclick="navigator.clipboard.writeText('oil painting, impressionist style, vibrant colors, thick brushstrokes, museum quality, masterpiece --ar 4:5')">Kopiuj Prompt</button>
+
+                <!-- Midjourney -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Midjourney</h3>
+                    <div class="tool-badge">Grafika</div>
+                    <p class="tool-description">Najlepsze AI do generowania obrazów. Fotorealizm, sztuka, ilustracje - wszystko w najwyższej jakości.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Przez Discord</li>
+                        <li><i class="fas fa-check"></i> Od $10/miesiąc</li>
+                        <li><i class="fas fa-check"></i> Niesamowita jakość</li>
+                        <li><i class="fas fa-check"></i> Różne style artystyczne</li>
+                    </ul>
+                    <a href="https://midjourney.com" target="_blank" class="tool-btn">Odwiedź Midjourney</a>
                 </div>
-                
-                <div class="card">
-                    <h3>🐺 Logo & Branding</h3>
-                    <code style="display: block; background: #000; padding: 15px; border-radius: 5px; color: #0f0; margin: 15px 0;">
-                        minimalist wolf logo, geometric shapes, gold and black, vector style, clean design, professional --ar 1:1
-                    </code>
-                    <button class="btn" onclick="navigator.clipboard.writeText('minimalist wolf logo, geometric shapes, gold and black, vector style, clean design, professional --ar 1:1')">Kopiuj Prompt</button>
+
+                <!-- Gemini -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3>Google Gemini</h3>
+                    <div class="tool-badge">Darmowe</div>
+                    <p class="tool-description">AI od Google z dostępem do wyszukiwarki. Świetne do researchu i aktualnych informacji.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Całkowicie darmowe</li>
+                        <li><i class="fas fa-check"></i> Integracja z Google</li>
+                        <li><i class="fas fa-check"></i> Aktualne dane z internetu</li>
+                        <li><i class="fas fa-check"></i> Multimodalne (tekst, obraz)</li>
+                    </ul>
+                    <a href="https://gemini.google.com" target="_blank" class="tool-btn">Odwiedź Gemini</a>
                 </div>
-                
-                <div class="card">
-                    <h3>🌌 Sci-Fi & Fantasy</h3>
-                    <code style="display: block; background: #000; padding: 15px; border-radius: 5px; color: #0f0; margin: 15px 0;">
-                        epic sci-fi scene, massive spaceship, alien planet, dramatic lighting, cinematic, concept art style --ar 21:9 --v 6
-                    </code>
-                    <button class="btn" onclick="navigator.clipboard.writeText('epic sci-fi scene, massive spaceship, alien planet, dramatic lighting, cinematic, concept art style --ar 21:9 --v 6')">Kopiuj Prompt</button>
+
+                <!-- Ollama -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Ollama</h3>
+                    <div class="tool-badge">Offline</div>
+                    <p class="tool-description">Uruchamiaj modele AI lokalnie na swoim komputerze. 100% prywatności i darmowe użytkowanie.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Całkowicie darmowe</li>
+                        <li><i class="fas fa-check"></i> Działa offline</li>
+                        <li><i class="fas fa-check"></i> Pełna prywatność</li>
+                        <li><i class="fas fa-check"></i> Windows/Mac/Linux</li>
+                    </ul>
+                    <a href="https://ollama.com" target="_blank" class="tool-btn">Pobierz Ollama</a>
                 </div>
-                
-                <div class="card">
-                    <h3>🏠 Architektura & Wnętrza</h3>
-                    <code style="display: block; background: #000; padding: 15px; border-radius: 5px; color: #0f0; margin: 15px 0;">
-                        modern minimalist interior, large windows, natural light, white walls, wooden floor, plants, architectural photography --ar 16:9
-                    </code>
-                    <button class="btn" onclick="navigator.clipboard.writeText('modern minimalist interior, large windows, natural light, white walls, wooden floor, plants, architectural photography --ar 16:9')">Kopiuj Prompt</button>
+
+                <!-- Notion AI -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Notion AI</h3>
+                    <div class="tool-badge">Produktywność</div>
+                    <p class="tool-description">AI wbudowane w Notion. Idealne do notatek, pisania dokumentów i organizacji pracy.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Integracja z workspace</li>
+                        <li><i class="fas fa-check"></i> Od $10/mies.</li>
+                        <li><i class="fas fa-check"></i> Pisanie i edycja</li>
+                        <li><i class="fas fa-check"></i> Tłumaczenia i streszczenia</li>
+                    </ul>
+                    <a href="https://notion.so" target="_blank" class="tool-btn">Odwiedź Notion</a>
+                </div>
+
+                <!-- ElevenLabs -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>ElevenLabs</h3>
+                    <div class="tool-badge">Audio</div>
+                    <p class="tool-description">Realistyczne generowanie głosu z tekstu. Idealne do audioboków, prezentacji i treści video.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Darmowy plan (10k znaków)</li>
+                        <li><i class="fas fa-check"></i> Naturalny głos</li>
+                        <li><i class="fas fa-check"></i> Wiele języków</li>
+                        <li><i class="fas fa-check"></i> Klonowanie głosu</li>
+                    </ul>
+                    <a href="https://elevenlabs.io" target="_blank" class="tool-btn">Odwiedź ElevenLabs</a>
+                </div>
+
+                <!-- Perplexity -->
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Perplexity AI</h3>
+                    <div class="tool-badge">Research</div>
+                    <p class="tool-description">AI wyszukiwarka z cytowaniami. Najlepsze do researchu i weryfikacji informacji.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Darmowa wersja</li>
+                        <li><i class="fas fa-check"></i> Źródła i cytowania</li>
+                        <li><i class="fas fa-check"></i> Aktualne informacje</li>
+                        <li><i class="fas fa-check"></i> Pro: GPT-4 i Claude</li>
+                    </ul>
+                    <a href="https://perplexity.ai" target="_blank" class="tool-btn">Odwiedź Perplexity</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- AUTOMATYZACJA -->
+    <section id="automation" class="automation-section">
+        <div class="container">
+            <h2>Automatyzacja z AI - Przykłady zastosowań</h2>
+            <p class="section-subtitle">Zobacz jak AI może zaoszczędzić Twój czas</p>
             
-            <div style="margin-top: 40px; text-align: center;">
-                <p style="color: #ccc; font-size: 1.1rem;">
-                    <strong>📨 Potrzebujesz custom promptów?</strong><br>
-                    Wyślij mi zapytanie: <a href="mailto:kontakt@karentonoyan.pl" style="color: var(--gold);">kontakt@karentonoyan.pl</a>
-                </p>
+            <div class="automation-grid">
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Automatyzacja e-maili</h3>
+                    <p>AI pisze odpowiedzi, sortuje wiadomości, generuje podsumowania i przypomina o follow-upach.</p>
+                    <div class="time-saved">Oszczędność: 2-3h dziennie</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Generowanie raportów</h3>
+                    <p>Automatyczne tworzenie raportów z danych, analiza trendów i prezentacja wyników.</p>
+                    <div class="time-saved">Oszczędność: 5-10h tygodniowo</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Obsługa klienta</h3>
+                    <p>Chatboty AI odpowiadają na pytania 24/7, kierują do odpowiednich działów i rozwiązują proste sprawy.</p>
+                    <div class="time-saved">ROI: 300-500%</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social media</h3>
+                    <p>Generowanie postów, harmonogramy publikacji, odpowiedzi na komentarze i analiza engagement.</p>
+                    <div class="time-saved">Oszczędność: 10-15h tygodniowo</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programowanie</h3>
+                    <p>AI pisze kod, znajduje błędy, generuje testy i dokumentację. Przyspiesza development o 40-60%.</p>
+                    <div class="time-saved">Wzrost produktywności: 40-60%</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Analiza danych</h3>
+                    <p>Przetwarzanie big data, znajdowanie wzorców, predykcja trendów i wizualizacja wyników.</p>
+                    <div class="time-saved">100x szybsza analiza</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <h3>Content marketing</h3>
+                    <p>Generowanie artykułów, postów, newsletterów, opisów produktów i copy reklamowych.</p>
+                    <div class="time-saved">Oszczędność: 20-30h miesięcznie</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Tłumaczenia</h3>
+                    <p>Natychmiastowe tłumaczenie dokumentów, stron web, e-maili na dziesiątki języków.</p>
+                    <div class="time-saved">95% taniej niż tłumacz</div>
+                </div>
+
+                <div class="automation-item">
+                    <div class="automation-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Zarządzanie projektami</h3>
+                    <p>AI pomaga w planowaniu, estymacji czasu, priorytetyzacji zadań i przewidywaniu ryzyk.</p>
+                    <div class="time-saved">30% lepsza efektywność</div>
+                </div>
+            </div>
+
+            <div class="automation-cta">
+                <h3>Chcesz zautomatyzować swoje procesy?</h3>
+                <p>Skontaktuj się ze mną - pomogę Ci wdrożyć AI w Twojej firmie</p>
+                <a href="#contact" class="cta-btn">Umów konsultację</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEZPIECZEŃSTWO I RYZYKA -->
+    <section id="security" class="security-section">
+        <div class="container">
+            <h2>Bezpieczeństwo i ryzyka AI</h2>
+            
+            <div class="warning-box">
+                <div class="warning-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Ważne ostrzeżenie</h3>
+                </div>
+                <p>AI to potężne narzędzie, ale wymaga odpowiedzialnego podejścia. Musisz być świadomy ryzyk i odpowiednio się zabezpieczyć.</p>
+            </div>
+
+            <div class="security-content">
+                <div class="security-grid">
+                    <!-- Ryzyka -->
+                    <div class="security-block risks-block">
+                        <h3><i class="fas fa-shield-alt"></i> Główne zagrożenia</h3>
+                        <div class="security-list">
+                            <div class="security-item danger">
+                                <i class="fas fa-lock"></i>
+                                <div>
+                                    <h4>Wyciek danych wrażliwych</h4>
+                                    <p><strong>Nigdy nie wklejaj:</strong> haseł, numerów kart, danych osobowych klientów, poufnych dokumentów firmowych do publicznych AI.</p>
+                                </div>
+                            </div>
+                            <div class="security-item danger">
+                                <i class="fas fa-copyright"></i>
+                                <div>
+                                    <h4>Naruszenie praw autorskich</h4>
+                                    <p>Treści generowane przez AI mogą zawierać fragmenty chronionych dzieł. Zawsze weryfikuj i modyfikuj wygenerowaną treść.</p>
+                                </div>
+                            </div>
+                            <div class="security-item danger">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>
+                                    <h4>Halucynacje AI</h4>
+                                    <p>AI czasem wymyśla fakty, cytaty, statystyki. <strong>Zawsze sprawdzaj</strong> ważne informacje w wiarygodnych źródłach.</p>
+                                </div>
+                            </div>
+                            <div class="security-item danger">
+                                <i class="fas fa-user-secret"></i>
+                                <div>
+                                    <h4>Deepfake i manipulacje</h4>
+                                    <p>AI potrafi podrabiać głos, twarze, dokumenty. Weryfikuj tożsamość i autentyczność w ważnych sprawach.</p>
+                                </div>
+                            </div>
+                            <div class="security-item danger">
+                                <i class="fas fa-brain"></i>
+                                <div>
+                                    <h4>Nadmierna zależność</h4>
+                                    <p>AI ma uzupełniać, nie zastępować myślenia. Nie wyłączaj krytycznego myślenia i własnej oceny sytuacji.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zasady bezpieczeństwa -->
+                    <div class="security-block safety-block">
+                        <h3><i class="fas fa-check-circle"></i> Jak bezpiecznie korzystać</h3>
+                        <div class="security-list">
+                            <div class="security-item safe">
+                                <i class="fas fa-eye"></i>
+                                <div>
+                                    <h4>Czytaj politykę prywatności</h4>
+                                    <p>Sprawdź jak narzędzie AI wykorzystuje Twoje dane. Niektóre używają ich do treningu modeli.</p>
+                                </div>
+                            </div>
+                            <div class="security-item safe">
+                                <i class="fas fa-user-lock"></i>
+                                <div>
+                                    <h4>Anonimizuj dane</h4>
+                                    <p>Przed wklejeniem danych zastąp prawdziwe nazwiska, firmy, lokalizacje placeholder'ami.</p>
+                                </div>
+                            </div>
+                            <div class="security-item safe">
+                                <i class="fas fa-search"></i>
+                                <div>
+                                    <h4>Weryfikuj fakty</h4>
+                                    <p>Sprawdzaj statystyki, cytaty, fakty historyczne - szczególnie przed publikacją lub ważnymi decyzjami.</p>
+                                </div>
+                            </div>
+                            <div class="security-item safe">
+                                <i class="fas fa-server"></i>
+                                <div>
+                                    <h4>Używaj lokalnych rozwiązań</h4>
+                                    <p>Dla wrażliwych danych rozważ Ollama lub inne modele działające offline na Twoim komputerze.</p>
+                                </div>
+                            </div>
+                            <div class="security-item safe">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Edukuj swój zespół</h4>
+                                    <p>Upewnij się, że wszyscy w firmie rozumieją zasady bezpiecznego korzystania z AI.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dodatkowe wskazówki -->
+                <div class="security-tips">
+                    <h3>Złota zasada: Zdrowy rozsądek</h3>
+                    <p>Czy wkleiłbyś te dane na publicznym forum? Nie? To nie wklejaj ich do AI.</p>
+                    <p>Czy zaufałbyś tej informacji bez sprawdzenia? Nie? To sprawdź zanim użyjesz.</p>
+                    <p><strong>AI to narzędzie, nie wyrocznia. Ty jesteś odpowiedzialny za finalne decyzje.</strong></p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- KONTAKT -->
-    <section id="kontakt" style="background: var(--gray);">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>📧 Kontakt & Współpraca</h2>
-            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
-                <p style="color: #ccc; font-size: 1.2rem; margin-bottom: 30px;">
-                    Zainteresowany współpracą, licencją na programy lub konsultacją psychologiczną?
-                </p>
-                <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
-                    <a href="mailto:kontakt@karentonoyan.pl" class="btn" style="width: 300px;">📧 kontakt@karentonoyan.pl</a>
-                    <a href="mailto:ktonoyan38@gmail.com" class="btn" style="width: 300px;">📧 ktonoyan38@gmail.com</a>
-                    <a href="mailto:ktono1986@gmail.com" class="btn" style="width: 300px;">📧 ktono1986@gmail.com</a>
-                    <a href="tel:+48796230413" class="btn" style="width: 300px;">📞 796 230 413</a>
-                    <a href="https://github.com/Karen86Tonoyan" target="_blank" class="btn" style="width: 300px;">💻 GitHub Portfolio</a>
+            <h2>Kontakt i szkolenia</h2>
+            
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <p>Interesują Cię szkolenia z AI, konsultacje lub automatyzacja procesów w firmie?</p>
+                    <p><strong>Skontaktuj się ze mną - wspólnie znajdziemy najlepsze rozwiązanie!</strong></p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telefon</h3>
+                        <a href="tel:+48796230413">+48 796 230 413</a>
+                        <p class="contact-note">Pon-Pt: 9:00-18:00</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-mail</h3>
+                        <a href="mailto:kontakt@karentonoyan.pl">kontakt@karentonoyan.pl</a>
+                        <p class="contact-note">Odpowiadam w 24h</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/Karen86Tonoyan" target="_blank">Karen86Tonoyan</a>
+                        <p class="contact-note">Moje projekty</p>
+                    </div>
+                </div>
+
+                <!-- Oferta szkoleń -->
+                <div class="training-offer">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Oferta szkoleń</h3>
+                    <div class="training-grid">
+                        <div class="training-item">
+                            <h4>Szkolenie podstawowe</h4>
+                            <p>3-godzinny warsztat wprowadzający do AI. Praktyczne ćwiczenia, gotowe szablony promptów.</p>
+                            <ul>
+                                <li>Dla 5-15 osób</li>
+                                <li>Online lub stacjonarnie</li>
+                                <li>Materiały i certyfikat</li>
+                            </ul>
+                        </div>
+                        <div class="training-item">
+                            <h4>Szkolenie zaawansowane</h4>
+                            <p>Pełny dzień z AI - od podstaw po automatyzację. Dostosowane do Twojej branży.</p>
+                            <ul>
+                                <li>6-8 godzin</li>
+                                <li>Case studies z branży</li>
+                                <li>Plan wdrożenia AI</li>
+                            </ul>
+                        </div>
+                        <div class="training-item">
+                            <h4>Konsultacje indywidualne</h4>
+                            <p>Pomoc w konkretnym projekcie, audyt procesów, wdrożenie automatyzacji.</p>
+                            <ul>
+                                <li>1-na-1 lub dla zespołu</li>
+                                <li>Sesje po 2-4h</li>
+                                <li>Konkretne rezultaty</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="training-cta">
+                        <a href="mailto:kontakt@karentonoyan.pl" class="cta-btn">Zapytaj o ofertę</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer style="background: #0d0d0d; padding: 40px 0; text-align: center;">
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="container">
-            <p style="color: #888;">© 2025 Karen Tonoyan. Wszelkie prawa zastrzeżone.</p>
-            <p style="color: #666; margin-top: 10px;">
-                AI Developer | Psycholog | Fotograf MaxModels | Pisarz | ALFA Foundation
-            </p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">Karen Tonoyan</div>
+                    <p>Ekspert AI | Szkolenia i Konsultacje</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#welcome">Start</a>
+                    <a href="#about">O mnie</a>
+                    <a href="#ai-tools">Narzędzia</a>
+                    <a href="#contact">Kontakt</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Karen86Tonoyan" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:kontakt@karentonoyan.pl"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Karen Tonoyan. Wszelkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
