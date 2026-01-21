@@ -1,2 +1,2 @@
-# karentonoyan.pl
-karentonoyan.pl
+# karentonoyan.l
+karentonoyan
